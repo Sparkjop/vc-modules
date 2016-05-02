@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module>
+  <id>Spa.KlarnaCheckout</id>
+  <version>1.0.0</version>
+  <platformVersion>2.10.0</platformVersion>
+
+  <title>Spar Kjop Klarna Checkout</title>
+  <description>Test of making a Klarna Checkout Module</description>
+  <authors>
+    <author>Sigve</author>
+  </authors>
+  <iconUrl>Modules/$(Spa.KlarnaCheckout.Web)/Content/Logo.png</iconUrl>
+  
+  <assemblyFile>Spa.KlarnaCheckout.Web.dll</assemblyFile>
+  <moduleType>Spa.KlarnaCheckout.Web.Module, Spa.KlarnaCheckout.Web</moduleType>
+
+  <settings>
+    <group name="Payment methods|Klarna|Credentials">
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.AppKey</name>
+        <valueType>integer</valueType>
+        <title>Application key</title>
+        <description>Klarna application key from credentials</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.SecretKey</name>
+        <valueType>string</valueType>
+        <title>Secret key</title>
+        <description>Klarna secret key from credentials</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.Mode</name>
+        <valueType>string</valueType>
+        <defaultValue>test</defaultValue>
+        <allowedValues>
+          <value>test</value>
+          <value>real</value>
+        </allowedValues>
+        <title>Mode</title>
+        <description>Mode of klarna payment gateway (test or real)</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.TermsUrl</name>
+        <valueType>string</valueType>
+        <defaultValue>checkout/terms</defaultValue>
+        <title>Terms Url</title>
+        <description>Klarna Terms Url</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.CheckoutUrl</name>
+        <valueType>string</valueType>
+        <defaultValue>cart/checkout</defaultValue>
+        <title>Checkout Url</title>
+        <description>Klarna Checkout Url</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.ConfirmationUrl</name>
+        <valueType>string</valueType>
+        <defaultValue>cart/externalpaymentcallback</defaultValue>
+        <title>Confirmation Url</title>
+        <description>Klarna Confirmation Url</description>
+      </setting>
+      <setting>
+        <name>Spa.KlarnaCheckout.Web.PaymentActionType</name>
+        <valueType>string</valueType>
+        <allowedValues>
+          <value>Authorization/Capture</value>
+          <value>Sale</value>
+        </allowedValues>
+        <defaultValue>Authorization/Capture</defaultValue>
+        <title>Payment action type</title>
+        <description>Action type of payment</description>
+      </setting>
+    </group>
+  </settings>
+  
+</module>
